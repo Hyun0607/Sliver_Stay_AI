@@ -17,3 +17,85 @@
 
 ![Image](https://github.com/user-attachments/assets/9bbcff9f-1f87-423f-b3bf-38bbb63d1a74)
 
+
+---
+
+## 🧩 기술 스택
+
+| 영역 | 도구 |
+|------|------|
+| LLM | OpenAI GPT-4o (예상질의 생성, 추천 응답 생성) |
+| Embedding | OpenAI Text Embedding 3-small |
+| Vector DB | Chroma (LangChain 기반 VectorStore) |
+| RDB | PostgreSQL (GCP Cloud SQL 연동) |
+| Backend | FastAPI |
+| Frontend | React (음성 검색 인터페이스) |
+| 평가/분석 | pandas, scikit-learn, KoNLPy, TF-IDF 기반 정답 키워드 추출 |
+
+---
+
+## 🔍 AI 추천 + 평가 파이프라인
+
+### 1️⃣ 고유명사 추출 (GPT 기반)
+- 숙소 설명문에서 숙소명을 제외한 관광지·지명 등 고유명사를 추출
+- 예: `"설악산"`, `"강릉역"`, `"경포대"` 등
+- 📄 `고유명사_리스트_capstone.py`
+
+### 2️⃣ 핵심어 레이블 구축 (TF-IDF)
+- 고유명사와 설명문 명사를 비교하여, TF-IDF 기반 핵심어 추출
+- 📄 `핵심어_추출capstone.py`
+
+### 3️⃣ 평가 질의 생성 (GPT 기반)
+- 고유명사 및 장애인 편의시설을 조합하여 자연어 질의 자동 생성 (총 300개)
+- 조합 규칙:
+  - 1개: 편의시설 1개
+  - 2개: 고유명사 1 + 편의시설 1
+  - 3개: 고유명사 2 + 편의시설 1 또는 고유명사 1 + 편의시설 2
+- 📄 `평가_질의_만들기_capstone_ver2.py`
+
+### 4️⃣ 평가용 RAG 추천 실행
+- 사용자가 평가 질의 입력 → 벡터 검색 (Chroma) + 정형 정보 조회 (PostgreSQL)
+- GPT-4o가 상위 3개 숙소 추천
+- 📄 `capstone_rag(예상질의)_평가용.py`
+
+### 5️⃣ 모델 성능 평가
+- 정답 키워드(고유명사+편의시설)와 추천 숙소 비교
+- 포함 키워드 개수 및 완전 일치 여부 평가
+- 📄 `모델_평가_capstone.py`
+
+---
+
+## 🧪 성능 평가 결과
+
+| 지역 | 정확도(Accuracy) | 정밀도(Precision@3) | 평가 질의 수 |
+|------|------------------|----------------------|---------------|
+| 춘천시 | 0.73 | 0.61 | 100 |
+| 강릉시 | 0.69 | 0.59 | 100 |
+| 속초시 | 0.71 | 0.60 | 100 |
+
+✅ *예상 질의 기반 벡터 검색 구조가 기존 개요 기반보다 평균 정확도 약 15% 향상*
+
+---
+
+## 📦 시스템 아키텍처
+
+> `./assets/architecture_diagram.png` 경로에 이미지 추가 후 아래처럼 삽입  
+> ![시스템 아키텍처](./assets/architecture_diagram.png)
+
+---
+
+## 💬 주요 기능
+
+- 고령자/장애인 조건 기반 숙소 필터링 (엘리베이터, 휠체어 접근 등)
+- 자연어 기반 질의 인식
+- 지역 필터링 포함 벡터 검색
+- GPT 기반 숙소 추천 설명
+- 자동 평가 질의 생성 및 성능 측정
+
+---
+
+## 📁 전체 프로젝트 보기
+
+🔗 [SilverStay GitHub Repository](https://github.com/yourusername/SilverStay)
+
+---
