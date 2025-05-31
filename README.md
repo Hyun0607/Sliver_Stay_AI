@@ -35,12 +35,12 @@ LLM (GPT-4o)이 Top-3 숙소 추천
 
 ---
 
-## 🧩 기술 스택
+## 🧩 프로젝트 전체 기술 스택
 
 | 영역 | 도구 |
 |------|------|
-| LLM | OpenAI GPT-4o (예상질의 생성, 추천 응답 생성) |
-| Embedding | OpenAI Text Embedding 3-small |
+| LLM | OpenAI API(GPT-4o) (예상질의 생성, 고유명사 리스트 생성, 평가질의 생성, 추천 응답 생성) |
+| Embedding | OpenAI Embedding model |
 | Vector DB | Chroma (LangChain 기반 VectorStore) |
 | RDB | PostgreSQL (GCP Cloud SQL 연동) |
 | Backend | FastAPI |
@@ -51,7 +51,7 @@ LLM (GPT-4o)이 Top-3 숙소 추천
 
 ## 🔍 평가 파이프라인
 
-### 1️⃣ 고유명사 추출 (GPT 기반)
+### 1️⃣ 고유명사 추출 (OpenAI API(GPT-4o) 기반)
 - 숙소 설명문에서 숙소명을 제외한 관광지·지명 등 고유명사를 추출
 - 예: `"설악산"`, `"강릉역"`, `"경포대"` 등
 - 📄 `고유명사_리스트_capstone.py`
@@ -60,7 +60,7 @@ LLM (GPT-4o)이 Top-3 숙소 추천
 - 고유명사와 설명문 명사를 비교하여, TF-IDF 기반 핵심어 추출
 - 📄 `핵심어_추출capstone.py`
 
-### 3️⃣ 평가 질의 생성 (GPT 기반)
+### 3️⃣ 평가 질의 생성 (OpenAI API(GPT-4o) 기반)
 - 고유명사 및 장애인 편의시설을 조합하여 자연어 질의 자동 생성 (총 300개)
 - 조합 규칙:
   - 1개: 편의시설 1개
