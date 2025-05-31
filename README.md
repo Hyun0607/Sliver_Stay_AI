@@ -24,7 +24,7 @@
 
 ## 🧠 RAG 기술 구조
 
-<img src="./images/RAG2.png" width="600">
+<img src="./images/RAG2.png" width="800">
 
 ## ⚙️ 질의 → 추천 흐름 요약
 
