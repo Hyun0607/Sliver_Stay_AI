@@ -24,7 +24,7 @@
 
 ## 🧠 RAG 기술 구조
 
-![Image](https://github.com/user-attachments/assets/9bbcff9f-1f87-423f-b3bf-38bbb63d1a74)
+<img src="./images/depression_roc.png" width="400">
 
 ## ⚙️ 질의 → 추천 흐름 요약
 
