@@ -13,7 +13,7 @@
 
 ---
 
-## 🧠 핵심 기술 구조
+## 🧠 RAG 기술 구조
 
 ![Image](https://github.com/user-attachments/assets/9bbcff9f-1f87-423f-b3bf-38bbb63d1a74)
 
@@ -49,7 +49,7 @@ LLM (GPT-4o)이 Top-3 숙소 추천
 
 ---
 
-## 🔍 AI 추천 + 평가 파이프라인
+## 🔍 평가 파이프라인
 
 ### 1️⃣ 고유명사 추출 (GPT 기반)
 - 숙소 설명문에서 숙소명을 제외한 관광지·지명 등 고유명사를 추출
