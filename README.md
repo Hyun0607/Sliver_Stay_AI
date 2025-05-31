@@ -94,8 +94,24 @@ LLM (GPT-4o)이 Top-3 숙소 추천
 
 ---
 
-## 📁 전체 프로젝트 및 구현영상
+## 📁 발표영상
 
-🔗 [SilverStay GitHub Repository](https://github.com/yourusername/SilverStay)
-
----
+<table>
+  <tbody>
+    <tr>
+      <td>
+        <p align="center"> 25.06.01 발표 </p>
+        <a href="https://youtube.com/shorts/zrDNK5mdWFA?feature=share" title="SilverStay 발표 영상">
+          <img align="center" src="https://github.com/user-attachments/assets/defc25e0-b497-4147-9676-417dd817745d" width="300" >
+        </a>
+      </td>
+      <td>
+        <ul>
+          <li> 자연어 질의에 기반한 숙소 추천 흐름 시연 </li>
+          <li> 음성 검색 → LLM 기반 Top-3 숙소 응답 과정 시각화 </li>
+          <li> 예상질의 기반 벡터 검색 성능 데모 포함 </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
