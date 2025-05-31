@@ -30,7 +30,7 @@
 | RDB | PostgreSQL (GCP Cloud SQL 연동) |
 | Backend | FastAPI |
 | Frontend | React (음성 검색 인터페이스) |
-| 평가/분석 | pandas, scikit-learn, KoNLPy, TF-IDF 기반 정답 키워드 추출 |
+| 평가/분석 | pandas, KoNLPy, TF-IDF 기반 정답 키워드 추출 |
 
 ---
 
@@ -73,28 +73,12 @@
 | 강릉시 | 0.69 | 0.59 | 100 |
 | 속초시 | 0.71 | 0.60 | 100 |
 
-✅ *예상 질의 기반 벡터 검색 구조가 기존 개요 기반보다 평균 정확도 약 15% 향상*
+✅ *● 평가 결과, 모든 지역에서 정확도(Accuracy)가 약 0.6 이상으로 나타났으며, 특히 강릉시는 0.7/0.58(Accuracy/Precision)로 우수한 성능을 보였음*
+✅ *● 전반적으로, 서비스 초기 버전으로 충분한 신뢰도를 확보한 결과라 판단.*
 
 ---
 
-## 📦 시스템 아키텍처
-
-> `./assets/architecture_diagram.png` 경로에 이미지 추가 후 아래처럼 삽입  
-> ![시스템 아키텍처](./assets/architecture_diagram.png)
-
----
-
-## 💬 주요 기능
-
-- 고령자/장애인 조건 기반 숙소 필터링 (엘리베이터, 휠체어 접근 등)
-- 자연어 기반 질의 인식
-- 지역 필터링 포함 벡터 검색
-- GPT 기반 숙소 추천 설명
-- 자동 평가 질의 생성 및 성능 측정
-
----
-
-## 📁 전체 프로젝트 보기
+## 📁 전체 프로젝트 및 구현영상
 
 🔗 [SilverStay GitHub Repository](https://github.com/yourusername/SilverStay)
 
