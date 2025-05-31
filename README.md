@@ -18,6 +18,8 @@
 ![Image](https://github.com/user-attachments/assets/9bbcff9f-1f87-423f-b3bf-38bbb63d1a74)
 
 ## ⚙️ 질의 → 추천 흐름 요약
+
+```
 사용자 질의
 ↓
 OpenAI Embedding
@@ -29,6 +31,7 @@ Top-K 숙소 검색
 PostgreSQL 정형 정보 조회
 ↓
 LLM (GPT-4o)이 Top-3 숙소 추천
+```
 
 ---
 
