@@ -18,7 +18,7 @@ import re
 
 # ✅ 3. 데이터 로딩
 df_noun = pd.read_csv("숙소_고유명사 리스트.csv")
-df_overview = pd.read_csv("숙소_설명문문.csv")
+df_overview = pd.read_csv("숙소_설명문.csv")
 df_noun["고유명사"] = df_noun["고유명사"].apply(eval)  # 리스트로 변환
 df = pd.merge(df_noun, df_overview, on="숙소명", how="left")
 
