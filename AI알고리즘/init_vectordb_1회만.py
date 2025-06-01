@@ -3,7 +3,7 @@ from langchain.schema import Document
 from langchain.vectorstores import Chroma
 from langchain.embeddings import OpenAIEmbeddings
 
-df = pd.read_csv("VectorDB_캡스톤.csv").fillna("")
+df = pd.read_csv("VectorDB_캡스톤_ver2.csv").fillna("")
 
 docs = []
 for _, row in df.iterrows():
