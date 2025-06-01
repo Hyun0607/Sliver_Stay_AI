@@ -74,8 +74,8 @@ df["포함된_고유명사"] = included_keywords
 df["포함된_고유명사(TF-IDF)"] = included_keywords_with_score
 
 # ✅ 5. CSV로 저장
-df.to_csv("고유명사_TFIDF_포함숙소_ver2.csv", index=False, encoding="utf-8-sig")
-print("✅ 저장 완료: 고유명사_TFIDF_포함숙소_ver2.csv")
+df.to_csv("고유명사_TFIDF_포함숙소_ver3.csv", index=False, encoding="utf-8-sig")
+print("✅ 저장 완료: 고유명사_TFIDF_포함숙소_ver3.csv")
 
 # TF-IDF 딕셔너리 정렬 (내림차순)
 df["포함된_고유명사(TF-IDF)"] = df["포함된_고유명사(TF-IDF)"].apply(
@@ -83,7 +83,7 @@ df["포함된_고유명사(TF-IDF)"] = df["포함된_고유명사(TF-IDF)"].appl
 )
 
 # 새 파일로 저장
-df.to_csv("고유명사_TFIDF_포함숙소_ver2_sorted.csv", index=False, encoding="utf-8-sig")
-print("✅ 저장 완료: 고유명사_TFIDF_포함숙소_ver2_sorted.csv")
+df.to_csv("고유명사_TFIDF_포함숙소_ver3.csv", index=False, encoding="utf-8-sig")
+print("✅ 저장 완료: 고유명사_TFIDF_포함숙소_ver3.csv")
 
 ###### 위 파일에는 장애인 편의시설 칼럼이 없기 때문에 컬럼 추가 후 평가 질의로 넘어갈 것
